@@ -1,4 +1,4 @@
-# First CV
+# Outdoor-tours
 Modern looking page for fictional outdoor tours company. 
 
 ## Technologies
