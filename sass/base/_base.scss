@@ -10,8 +10,25 @@ html {
     font-size: 62.5%; /*instead of giving it a pixel value (10px) you should divide this value 
     by value of default font size in a browser (16px). It helps when user changes default 
     browser value manuallly, due to for example visual impairment */
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem = 9px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; //this way 1rem = 8px
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0; 
+    }
 }
