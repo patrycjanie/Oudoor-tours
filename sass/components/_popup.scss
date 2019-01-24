@@ -11,6 +11,12 @@
     visibility: hidden;
     transition: all .3s;
 
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) { //if browser supports given style all the code in curly brackets will be applied if not all stays the same - GRACEFUL DEGRADATION
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
     &__content {
         @include absCenter;
         width: 75%;
